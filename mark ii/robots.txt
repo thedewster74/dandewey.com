@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dandewey.com/sitemap.xml

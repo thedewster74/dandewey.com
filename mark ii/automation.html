@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation — Dan Dewey</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/fa7-all.css" />
+    <link rel="stylesheet" href="static/css/base.css" />
+
+    <!-- Font Awesome Pro v6 (use your own kit ID) -->
+    <script src="static/js/fa7-all.js" crossorigin="anonymous"></script>
+
+    <!-- Icons / PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="theme-color" content="#020617" />
+</head>
+<body>
+<div class="page">
+    <div class="shell">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="tag-badge">Automation</div>
+        
+        <h1>If you're doing it more than twice, automate it</h1>
+        
+        <p class="subtitle">Automation is about freeing your team to do work that actually matters, and giving them leverage to do exponentially more... eliminating toil.</p>
+        
+        <div class="content">
+            <h2>The trap</h2>
+			<p>Developers love the new shiny. Give someone an automation problem and there's a good chance they'll disappear for a week, emerge with something clever, and watch it fall apart on first contact with real data.</p>
+			<p>It's like that scene in Gung Ho where Michael Keaton gets into a car and it falls apart after two steps. Edge cases matter. Raw data is always full of edge cases. And nobody thinks about edge cases when they're excited about the elegant solution they're building.</p>
+			<p>The fix isn't better planning. It's starting smaller and iterating often. Build something that solves the immediate problem. Run it against real data. Watch it break. Fix it. Repeat. This only works if you have a CI/CD pipeline that accommodates fast iteration. If deploys are painful, people batch up changes, and batched changes hide problems.</p>
+			
+			<h2>Lego bricks, not unicorns</h2>
+			<p>My Unix background shaped how I think about automation. Small tools that do one thing well. Pipes that connect them. Simple systems that bolt together to create complex patterns.</p>
+			<p>Don't build a unicorn that solves your specific problem in a clever way. Build lego bricks that snap together. The brick you build today to solve one problem might solve three other problems next month. The unicorn just sits there, doing its one trick, until someone has to maintain it and realizes they can't.</p>
+			<p>This ties directly to platform engineering. Good automation becomes part of the platform. Bad automation becomes tribal knowledge that only one person understands.</p>
+			
+			<h2>When not to automate</h2>
+			<p>The threshold is gut feel at this point. If I'm doing something more than twice, I look for a way to script it. Unless scripting takes ten times the effort of just doing the task.</p>
+			<p>But effort isn't the only factor. The real question is: does this free up the team? If I can spend a day automating something and it gives five people their afternoons back, that math works. If I'm just scratching my own itch, maybe the manual way is fine.</p>
+			<p>Don't spend time polishing a turd. Sometimes good enough is perfect for getting through a problem and moving on.</p>
+			
+			<h2>The case against toil</h2>
+			<p>Toil is work that's manual, repetitive, automatable, and scales linearly with system size. It's the stuff that makes you feel busy but doesn't make you better.</p>
+			<p>Every hour spent on toil is an hour not spent on improvements. Good automation compounds. It pays dividends every time it runs.</p>
+            <div class="callout">
+                "The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency."
+            </div>			
+			<p>But there's a catch: automation applied to an inefficient process just magnifies the inefficiency. Before automating something, make sure it's worth automating.</p>
+
+            <h2>What good automation looks like</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>Idempotent</strong>: Run it once or run it ten times, same result.</li>
+                    <li><strong>Observable</strong>: You can see what it did and why.</li>
+                    <li><strong>Reversible</strong>: When possible, you can undo it.</li>
+                    <li><strong>Documented</strong>: The next person (including future you) can understand it.</li>
+                    <li><strong>Tested</strong>: You know it works before it runs in production.</li>
+                </ul>
+            </div>
+            
+<!--
+            <h2>Where I've applied it</h2>
+            <ul>
+                <li><strong>Observability pipelines</strong> — Automated monitoring setup for new systems via Python scripting</li>
+                <li><strong>Content delivery</strong> — Integrated CMS content into email platforms via API automation</li>
+                <li><strong>Reporting</strong> — Built executive KPI dashboards that self-update</li>
+                <li><strong>Data processing</strong> — Reduced mailing list delivery from hours to seconds</li>
+            </ul>
+-->
+            <h2>Tools of the trade</h2>
+            <ul>
+                <li>Python (primary language)</li>
+                <li>CI/CD pipelines</li>
+                <li>API integrations (REST, FuelSDK)</li>
+                <li>Scripting for cloud infrastructure</li>
+            </ul>
+        </div>
+        
+        <div class="related">
+            <h3>Related capabilities</h3>
+            <div class="related-links">
+                <a href="sre.html" class="related-link">SRE & Platform Engineering</a>
+                <a href="observability.html" class="related-link">Observability</a>
+                <a href="iac.html" class="related-link">Infrastructure as Code</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

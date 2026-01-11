@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRE & Platform Engineering — Dan Dewey</title>
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/fa7-all.css" />
+    <link rel="stylesheet" href="static/css/base.css" />
+
+    <!-- Font Awesome Pro v6 (use your own kit ID) -->
+    <script src="static/js/fa7-all.js" crossorigin="anonymous"></script>
+
+    <!-- Icons / PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="theme-color" content="#020617" />
+</head>
+<body>
+<div class="page">
+    <div class="shell">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="tag-badge">SRE & Platform Engineering</div>
+        
+        <h1>Reliability at Scale</h1>
+        
+        <p class="subtitle">SRE without Platform Engineering is just firefighting with better tools.</p>
+        
+        <div class="content">
+			<p>Site Reliability Engineering isn't about fighting fires. It's about designing systems where fires don't start.</p>
+			<p>But here's what I've learned: SRE on its own is incomplete. You can write the best runbooks, set the most thoughtful SLOs, run blameless postmortems after every incident. And you'll still be chasing your tail... because every team is solving the same problems differently, creating new failure modes faster than you can document the old ones.</p>
+			<p>That's where platform engineering comes in.</p>
+			
+			<h2>Why SRE needs Platform Engineering</h2>
+			<p>SRE gives you the philosophy: treat reliability as a feature, use error budgets to balance velocity against stability, automate toil so humans can focus on interesting problems.</p>
+			<p>Platform engineering gives you the leverage. It's the difference between teaching every team how to deploy safely and building a deployment system where unsafe deploys are hard to do by accident.</p>
+			<p>Without platform engineering, toil reduction becomes toil redistribution. You automate something for a team, then something else for a different team, and soon word gets around that you're the guy who people can run to for a quick fix.  Soon, all the teams have a new bottleneck: you.  You're not reducing work, you're just moving it around.</p>
+			<p>Golden paths solve this. When the easy way is also the right way, reliability stops being something you enforce and becomes something that happens by default.</p>
+			
+            <h2>What SRE means to me</h2>
+            <p>SRE sits at the intersection of software engineering and operations. It's about applying engineering discipline to infrastructure problems, treating reliability as something you design for rather than bolt on afterward.</p>
+			<p><u>The goal isn't perfection. It's understanding trade-offs</u>. How much reliability do we actually need? What does it cost to get there? And how do we build systems that degrade gracefully when things inevitably go wrong?</p>
+			<p><b>Error budgets over uptime theater.</b> If you're not occasionally breaking things, you're not moving fast enough. A 100% uptime target isn't ambitious. It's a lie you tell yourself that prevents you from shipping.</p>
+			<p><b>Toil reduction. Automate the repetitive.</b> If a human is doing something a computer could do, that's a failure of imagination or prioritization.</p>
+			<p><b>Blameless postmortems.</b> Systems fail. The question is whether you learn from it. Fix the system, not the person.</p>
+			<p><b>SLOs that matter.</b> Measure what users actually experience. A dashboard full of green doesn't mean anything if customers are frustrated.</p>
+			
+            <h2>What Platform Engineering means to me</h2>
+			<p>Platform engineering is about building the internal tools and abstractions that let other teams move fast without breaking things. It's a force multiplier for developer productivity, but only when done well. Done poorly, it becomes a bottleneck or a bureaucracy that teams route around.</p>
+			<p>The test is simple: are teams choosing to use your platform because it makes their lives easier, or because they're required to?</p>
+			<p>"The more they overthink the plumbing, the easier it is to stop up the drain." Scotty was talking about starship self-destruct systems, but the same rule applies here. Every clever abstraction is a future debugging session. When platform engineering goes wrong, it's usually because someone built for problems that don't exist yet, creating tech debt that solves nothing.</p>
+			
+            <h2>What I bring</h2>
+			<p>I've managed systems serving millions of requests, with teams spread across the globel, literally. The main lesson from that experience is humility. Scale reveals every shortcut you took and every assumption you made.</p>
+			<p>I have a bias toward simplification. Complexity is the enemy of reliability, and most complex systems got that way through accretion rather than intention. Knowing when to delete code is as important as knowing how to write it.</p>
+			<p>I speak business, not just tech. Reliability has a cost. So does unreliability. Being able to translate between engineering constraints and business priorities is how you get resources for the work that matters.</p>
+			<p>I run retrospectives that actually improve systems. Not blame sessions. Not theater. Structured conversations that surface what went wrong and, more importantly, what we're going to do about it.</p>
+        </div>
+        
+        <div class="related">
+            <h3>Related capabilities</h3>
+            <div class="related-links">
+                <a href="observability.html" class="related-link">Observability</a>
+                <a href="automation.html" class="related-link">Automation</a>
+                <a href="iac.html" class="related-link">Infrastructure as Code</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observability — Dan Dewey</title>
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/fa7-all.css" />
+    <link rel="stylesheet" href="static/css/base.css" />
+
+    <!-- Font Awesome Pro v6 (use your own kit ID) -->
+    <script src="static/js/fa7-all.js" crossorigin="anonymous"></script>
+
+    <!-- Icons / PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="theme-color" content="#020617" />
+</head>
+<body>
+<div class="page">
+    <div class="shell">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="tag-badge">Observability</div>
+        
+        <h1>You can't fix what you can't see</h1>
+        
+        <p class="subtitle">Observability is about asking questions you didn't know you needed to ask, and getting answers before users notice something's wrong.</p>
+
+        
+        <div class="content">
+
+		
+			<p>Monitoring tells you when something is broken. Observability tells you why. It's the difference between "the server is down" and "this specific query is timing out because of a lock contention issue introduced in yesterday's deploy."</p>
+		
+			<p>Good observability means any engineer can debug any problem, even if they’ve never seen that system before.</p>		
+<!--		
+            <h2>The language problem</h2>
+			<p>Engineers gravitate toward leading metrics: server capacity under load, milliseconds to execution, queue depth. Product owners care about trailing metrics: Core Web Vitals, NPS scores, user engagement.</p>
+			<p>Both are valid. Neither group speaks the other's language.</p>
+			<p>This is where SLOs become useful. Not as a technical exercise, but as a translation layer. A good SLO connects "p99 latency on the checkout endpoint" to "customers abandoning their carts." It gives engineers a target that matters to the business, and gives product owners a number they can actually influence through prioritization.</p>
+			<p>Getting this right is harder than it sounds. Most organizations either measure what's easy to measure, or measure everything and drown in dashboards.</p>
+-->
+			
+			<h2>Observability is beyond monitoring</h2>
+			<p>Monitoring is table stakes. It answers a binary question: <i>is something broken</i>? <br>
+			Observability answers a harder one: <i>what changed, why did it matter, and what should we do about it</i>?</p>
+			<p>This distinction matters for SRE. Error budgets only work if you can trace a problem back to its cause. When the budget is burning, you need to know whether to patch leaks or pause feature work. That decision requires context that monitoring alone can't give you.</p>
+			<p>The failure mode I see constantly: engineers build beautiful dashboards without asking two basic questions:
+<ul>
+<li>What is this telling me? 
+<li>What do I do when the needle is in the red?
+</ul>
+</p>
+			<p>Runbooks shouldn't be an afterthought. If a metric is worth alerting on, it's worth documenting what to do about it.</p>
+
+			<h2>Observability is a translation layer</h2>
+			<p>Engineers naturally gravitate toward leading indicators: latency, saturation, error rates.<br>
+			Product and business teams care about outcomes: conversion, engagement, revenue, trust.</p>
+			<p>Both perspectives are valid. The failure happens when they aren’t connected.</p>
+			<p>This is where SLOs actually matter: not as a compliance exercise, but as a translation layer. A well-defined SLO ties "<i>p99 latency on checkout</i>” to “<i>customers abandoning their carts.</i>" It gives engineers a technical target that reflects business reality, and gives product teams a lever they can reason about.</p>
+			<p>Most organizations get this wrong in one of two ways: they measure what’s easy, or they measure everything and drown in dashboards. In both cases, observability produces data, not decisions.</p>
+
+           <h2>The three pillars</h2>
+            <div class="three-pillars">
+                <div class="pillar">
+                    <h3>Logs</h3>
+                    <p>Discrete events. The narrative of what happened, in sequence.</p>
+                </div>
+                <div class="pillar">
+                    <h3>Metrics</h3>
+                    <p>Aggregated numbers over time. The vital signs of your system.</p>
+                </div>
+                <div class="pillar">
+                    <h3>Traces</h3>
+                    <p>Request flows across services. The map of how work moves.</p>
+                </div>
+            </div>
+ 
+			<h2>Bake it in</h2>
+			<p>Observability bolted on after the fact is like installing headlights after you've already driven into a ditch. It needs to be part of the platform from the start.</p>
+			<p>When observability is baked into your golden paths, teams don't have to think about instrumentation, <i>it just happens</i>. Every service emits traces. Every endpoint has latency metrics. Every error gets captured with context.</p>
+			<p>You're not steering blind. You're not waiting for users to report problems. You're seeing issues before they become incidents.</p>
+			
+			<h2>My philosophy</h2>
+			<p><b>Instrument early.</b> Adding observability after an outage is too late. Build it in from day one.</p>
+			<p><b>Alert on symptoms, not causes.</b> Users don't care about CPU utilization. They care if the page loads.</p>
+			<p><b>High cardinality matters.</b> The ability to slice by customer, endpoint, or deploy version is what makes debugging possible.</p>
+			<p><b>Dashboards are documentation.</b> If you can't explain your system through its dashboards, you don't understand it well enough.</p>
+			
+            <h2>Tools I've worked with</h2>
+            <ul>
+                <li>New Relic (APM, Infrastructure, Logs)</li>
+                <li>Prometheus+Grafana</li>
+                <li>Pluralsight Flow (developer productivity metrics)</li>
+                <li>PowerBI (executive KPI dashboards)</li>
+                <li>Custom instrumentation (Python)</li>
+            </ul>
+        </div>
+        
+        <div class="related">
+            <h3>Related capabilities</h3>
+            <div class="related-links">
+                <a href="sre.html" class="related-link">SRE & Platform Engineering</a>
+                <a href="automation.html" class="related-link">Automation</a>
+                <a href="iac.html" class="related-link">Infrastructure as Code</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

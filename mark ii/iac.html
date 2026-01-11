@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure as Code — Dan Dewey</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/fa7-all.css" />
+    <link rel="stylesheet" href="static/css/base.css" />
+
+    <!-- Font Awesome Pro v6 (use your own kit ID) -->
+    <script src="static/js/fa7-all.js" crossorigin="anonymous"></script>
+
+    <!-- Icons / PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="theme-color" content="#020617" />
+</head>
+<body>
+<div class="page">
+    <div class="shell">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="tag-badge">Infrastructure as Code</div>
+        
+        <h1>Your infrastructure should be in version control</h1>
+        
+        <p class="subtitle">IaC means treating infrastructure the way we treat software: versioned, tested, reviewed, and repeatable.</p>
+        
+        <div class="content">
+            <h2>Why it matters</h2>
+            <p>Manual infrastructure is a liability. It's inconsistent, undocumented, and impossible to reproduce. When the person who set it up leaves, so does the knowledge.</p>
+            
+            <p>Infrastructure as Code changes that. Your infrastructure becomes:</p>
+            <ul>
+                <li><strong>Documented</strong> — The code IS the documentation</li>
+                <li><strong>Reviewable</strong> — Changes go through pull requests</li>
+                <li><strong>Reproducible</strong> — Spin up identical environments on demand</li>
+                <li><strong>Auditable</strong> — Git history shows who changed what and when</li>
+            </ul>
+            
+            <h2>The difference</h2>
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Without IaC</h3>
+                    <p>"We think Dave set up the firewall rules. He left six months ago. Nobody knows why port 8443 is open."</p>
+                </div>
+                <div class="comparison-box good">
+                    <h3>✓ With IaC</h3>
+                    <p>"Port 8443 was opened in commit abc123 for the legacy API migration. Here's the PR with the discussion."</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>My approach</h3>
+                <ul>
+                    <li><strong>Declarative over imperative</strong> — Describe what you want, not how to get there</li>
+                    <li><strong>Modules for reuse</strong> — Don't repeat yourself across environments</li>
+                    <li><strong>State management</strong> — Know what exists and what should exist</li>
+                    <li><strong>Drift detection</strong> — Catch when reality diverges from code (see: MonitorMatrix)</li>
+                </ul>
+            </div>
+            
+            <h2>Related work</h2>
+            <p>MonitorMatrix, my configuration-verification project, is directly tied to IaC principles — it detects when deployed infrastructure drifts from its intended state, closing the loop between "infrastructure as code" and "infrastructure as deployed."</p>
+        </div>
+        
+        <div class="related">
+            <h3>Related capabilities</h3>
+            <div class="related-links">
+                <a href="sre.html" class="related-link">SRE & Platform Engineering</a>
+                <a href="observability.html" class="related-link">Observability</a>
+                <a href="automation.html" class="related-link">Automation</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
